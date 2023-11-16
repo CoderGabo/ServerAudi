@@ -8,6 +8,12 @@ const sequelize = new Sequelize(
     host: process.env.DB_HOST,
     dialect: "postgres",
     timezone: process.env.DB_TZ,
+    dialectOptions: {
+      ssl: {
+        require: true,
+      },
+    },
+
   }
 );
 
